@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+  <head>
+
+    {% include x_head.html %}
+    <link rel="manifest" href="/manifest.json">
+    <script src="/index.js"></script>
+ </head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  {% include x_header_others.html %}
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+
+<!--Inner page section end-->
+    <section class="inner-page">
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+           {{%content%}}
+      </section><!-- End Services Section -->
+      
+
+
+
+    </section><!-- End Inner Section-->
+
+
+  <!-- ======= Clients Section ======= -->
+        
+    {% include x_client.html %}
+ 
+  <!-- End Cliens Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+    {% include x_footer.html%}
+
+
+</body>
+
+</html>

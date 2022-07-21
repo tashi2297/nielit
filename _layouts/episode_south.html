@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    {% include x_head.html %}
+    <link rel="manifest" href="/manifest.json">
+    <script src="/index.js"></script>
+ </head>
+
+<body>
+
+	<!-- ======= Header ======= -->
+  {% include x_header_others.html %}
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+
+    <!--Inner page section end-->
+    <section class="inner-page" style="padding-bottom: 00px;">
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+          
+          {% include head.html %}
+          <article class="post">
+            <header class="post-header">
+              <div class="post-title-episode">
+                 <div class="post-header-stop-id" style="background-image: url('{{ site.baseurl }}{{ site.headphones_icon_color }}');
+                                                          color: black;
+                                                          "><span>{{ page.stop_id }}</span></div>
+                    {% if page.section_title != null %}
+                       <h2 class="post-header-section-title"  style="color: black;">{{ page.section_title }}</h1>
+                    {% endif %}
+                    {% if page.title != null %}
+                       <h3 class="post-header-title">{{ page.title }}</h2>
+
+                        <a class="site-header-menu-button dont-use-ios-override" href="{{ site.baseurl }}/east_tabs">
+                          <img src="{{ site.baseurl }}/assets/img/icons/menu_icon.png"/>
+                        </a>
+                    {% endif %}
+                 </div>
+             </header>
+  
+            {% if page.hero_images != null %}
+              <div class="slick-container post-hero-image-container">
+                <div class="slick-post-hero-image">
+                  {% for hero in page.hero_images %}
+                    <div class="post-hero-image">    
+                      <img src="{{ site.baseurl }}{{ site.episode_hero_path }}{{hero.path}}" alt="{{hero.alt_text}}"/>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            {% endif %}
+            
+            <section class="inner-page" style="padding-top: 0px;">
+
+              <!-- ======= 2nd Services Section ======= -->
+              <section id="services" class="services section-bg" style="padding-bottom: 0px;">
+                <div class="section-title" style="padding-top: 0px;">
+                  <h3>Hit the Play Button and start Reading below</h3>
+                </div>
+                <div class="container" data-aos="fade-up" style="padding-top: 60px;">
+
+                  <!--Music Player Codes Start-->
+                  <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                    <div class="jp-gui jp-interface audio-footer-container" data-role="footer" data-position="fixed" data-tap-toggle="false">
+                      <div class="audio-player">
+                        
+                        <div class="player-now-playing">
+                          <p>
+                          {{ page.title }}
+                          </p>
+                        </div>
+                  
+                        {% if page.audio_file != null %}
+                        <div id="jquery_jplayer_1" class="jp-jplayer"></div>
+                        <div id="episode-element">
+                          <audio>
+                            <source id="episode-source" src="{{ site.baseurl }}{{ site.audio_path }}{{ page.audio_file }}" type="audio/mpeg">
+                          Your browser does not support the audio element.
+                          </audio>
+                        </div>
+                  
+                        <div class="jp-progress">
+                          <div class="jp-seek-bar">
+                            <div class="jp-play-bar"></div>
+                          </div>
+                        </div>
+                            
+                        <div class="jp-no-solution">
+                          <span>Update Required</span>
+                          To play audio, be sure to enable JavaScript, and run a browser that supports HTML5 MP3 audio, or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                        </div>
+                  
+                        {% endif %}
+                  
+                        {% include z_south_audio_player.html %}
+                        
+                        <!-- Audio Player shifted to _includes folder with names z_east_audio_player.html-->
+                  
+                      </div>
+                    </div>
+                  </div>    <!--Music Player Codes End-->
+                            
+                </div>
+              </section><!-- End 2nd Services Section -->
+            </section>
+
+
+
+
+            <div class="post-content">
+              {{ content  }}
+            </div>
+          </article>
+
+        </div>
+      </section><!-- End Services Section -->
+
+    </section><!-- End Inner Section-->
+
+
+  <!-- ======= Clients Section ======= -->
+        
+    {% include x_client.html %}
+ 
+  <!-- End Cliens Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+    {% include x_footer.html%}
+
+
+</body>
+
+</html>

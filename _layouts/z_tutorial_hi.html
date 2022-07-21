@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+	<head>
+
+		{% include x_head.html %}
+		<link rel="manifest" href="/manifest.json">
+		<script src="/index.js"></script>
+   </head>
+
+<body>
+
+	<!-- ======= Header ======= -->
+      {% include x_header_others.html %}
+    <!-- End Header -->
+
+	<main id="main">
+
+		<!--Inner page section end-->
+
+		<section class="inner-page" style="">
+			<section id="services" class="about">
+				<div class="container" data-aos="fade-up">
+					<div class="section-title" style="padding-top: 0px;">
+						<h2>कृपया निर्देशों को ध्यान से पढ़ें।</h2>
+					</div>
+
+                    {%include head.html%}
+					<div class="row"style="background-color: #3d4d6a;">
+					<div class="page-content" >
+					<div class="wrapper welcome">
+						<div class="slick">
+							<div>
+								<style>
+									p{
+										color: white;
+									}
+								</style>
+								<p>प्रदर्शनी में हेडफ़ोन चिह्न देखें और फिर उस नंबर को हिट करें जो आप शुरू करने के लिए सामने हैं।</p>
+								<p>
+									<img class="welcome-example-icon slick-slide-to-next" src="{{ site.baseurl }}/assets/img/welcome/example-headphones-icon.gif"/>
+								</p>
+						
+								<div class="prompt slick-slide-to-next">आगे पढ़ने के लिए स्वाइप करें
+									<span class="button-forward">
+										  <img src="{{ site.baseurl }}/assets/img/icons/button_forward.png"/>
+									</span>
+								</div>
+							</div>
+							<div>
+								<p>स्टॉप बदलने के लिए स्क्रीन के ऊपर दाईं ओर स्थित मेनू आइकन दबाएं।</p>
+								<p>
+									<img class="screenshot slick-slide-to-next" src="{{ site.baseurl }}/assets/img/welcome/highlight-bento-menu.gif"/>
+								</p>
+							</div>
+							<div>
+								<p>अगले या पिछले स्टॉप पर जाने के लिए स्क्रीन के निचले भाग में स्थित बटनों का उपयोग करें।</p>
+								<p>
+									<img class="screenshot slick-slide-to-next" src="{{ site.baseurl }}/assets/img/welcome/highlight-footer-buttons.gif"/>
+								</p>
+							</div>
+							<div>
+								<br/>
+								<p class="centered"><a href="{{ site.baseurl }}/">चलिए शुरू करते हैं!</a></p>
+								<p class="centered">
+									<a href="{{ site.baseurl }}/district/" class="prompt-big"><button
+											class="styled-button"><img
+												src="{{ site.baseurl }}/assets/img/icons/button_forward.png" /></button></a>
+								</p>
+							</div>
+						</div>
+
+						<div id="arrows-container">
+						</div>
+
+						<p class="skip-text"  style="color: black;">
+							<a href="{{site.baseurl}}/district/">
+								मैं अच्छा हूँ, चलिए शुरू करते हैं!
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+				</div>
+			</section>
+		</section>
+
+
+  <!-- ======= Clients Section ======= -->
+        
+  {% include x_client.html %}
+ 
+  <!-- End Cliens Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+{% include x_footer.html%}
+
+
+</body>
+
+</html>

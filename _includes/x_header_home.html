@@ -1,0 +1,39 @@
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+
+        <h1 class="logo me-auto"><a href="{{site.baseurl}}/">e-tourist Audio Guide</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto " href={{site.baseurl}}/>Home</a></li>
+                {% for lang in site.languages %}
+                                {% assign lang_name = site.data[lang].l10n.lang_name %}
+                                    {% if lang == site.active_lang %}
+                                        {{ lang_name }}
+                                    {% else %}
+                                        {% if lang == site.default_lang %} 
+
+                                        {% else %}
+
+                                            <a href="#about" class="btn-learn-more"> About</a>
+
+                                            {% endif %}
+                                    {% endif %}
+                           {% break %}
+                        {% endfor %}
+               
+                <li><a class="nav-link scrollto " href="#portfolio">Quick View</a></li>
+
+
+
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+
+    </div>
+</header><!-- End Header -->
+

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	 {% include x_head.html %}
+ 
+</head>
+
+<body>
+	<!-- ======= Header ======= -->
+	{% include x_header_home.html %}
+    <!-- End Header -->
+
+	<!-- ======= Hero Section ======= -->
+	<section id="hero" class="d-flex align-items-center">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+					data-aos="fade-up" data-aos-delay="200">
+					<h1>ICT Intervention in Travel & Tourism (T&T)</h1>
+					<h2>A project sponsored by Ministry of Electronics & IT (MeitY)</h2>
+					<h2>Implemented by NIELIT Gangtok</h2>
+					<div class="d-flex justify-content-center justify-content-lg-start">
+
+						{% for lang in site.languages %}
+                            	{% assign lang_name = site.data[lang].l10n.lang_name %}
+                             		{% if lang == site.active_lang %}
+                               			{{ lang_name }}
+                               		{% else %}
+                              			{% if lang == site.default_lang %} 
+
+		                                {% else %}
+										   <a href="{{ lang }}/tutorial" class="btn-get-started scrollto">Get Started</a>
+										   <a href="{{ lang }}/district" class="btn-get-started scrollto">Skip to Main Context</span></a>
+                        		        {% endif %}
+                           			{% endif %}
+						   {% break %}
+                        {% endfor %}
+					</div>
+				</div>
+				<div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+					<img src="/assets/images/hero-img.png" class="img-fluid animated" alt="">
+				</div>
+			</div>
+		</div>
+
+	</section><!-- End Hero -->
+
+	<main id="main">
+
+		<!-- ======= Clients Section ======= -->
+		{% include x_client.html %}
+		</section><!-- End Cliens Section -->
+
+		<!-- ======= About Us Section ======= -->
+		<section id="about" class="about">
+			<div class="container" data-aos="fade-up">
+
+				<div class="section-title">
+					<h2>About the Project</h2>
+				</div>
+
+				<div class="row content">
+					<div class="col-lg-6">
+						<p>
+							Sikkim is one of the most beautiful State located in the north-eastern part of India. Protected by the
+							might of the majestic Kanchenzonga and blessed by the chanting of the holy gods, Sikkim magnificently
+							rests on the lap of the nature amidst mystical tranquillity.
+						</p>
+
+
+                        <ul>
+							<li><i class="ri-check-double-line"></i> With 5.5L domestic visitors in 2011.
+								</li>
+							<li><i class="ri-check-double-line"></i> Around 14.2L visitors in 2019
+                                 </li>
+							<li><i class="ri-check-double-line"></i> .23L foreign visitors in 2011 to 1.33L visitor in 2019
+								</li>
+						</ul>
+
+					</div>
+
+					<div class="col-lg-6 pt-4 pt-lg-0">
+						<p>
+							The State Government and the Department of Tourism &amp; Civil Aviation since time has been
+							instrumental in promoting the state as a prominent tourist avenue with the prime motive of allowing the
+							enthusiastic explorer to witness the marvellous natural beauty and simulatenously uplifting the
+							economic prosperity of the stakeholders, a win-win situation for all.
+						</p>
+					<a href="#" class="btn-learn-more">Learn More</a>   
+
+
+					</div>
+				</div>
+
+			</div>
+		</section><!-- End About Us Section -->
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+	<div class="container" data-aos="fade-up">
+
+	  <div class="section-title">
+		<h2>Quick View</h2>
+		<p>Here are some tourist destination sites at Sikkim.</p>
+	  </div>
+
+	  <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+		<li data-filter="*" class="filter-active">All</li>
+		<li data-filter=".filter-app">East</li>
+		<li data-filter=".filter-card">North</li>
+		<li data-filter=".filter-web">South</li>
+		<li data-filter=".filter-net">West</li>
+	  </ul>
+
+	  <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+		  <div class="portfolio-img"><img src="/assets/img/stops/babamandir1.jpg" class="img-fluid" alt=""></div>
+		  <div class="portfolio-info">
+			<h4>East 1</h4>
+			<p>Baba mandir</p>
+			<a href="/assets/img/stops/babamandir1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Baba Mandir"><i class="bx bx-plus"></i></a>
+		  </div>
+		</div>
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+		  <div class="portfolio-img"><img src="/assets/img/stops/temi4.jpg" class="img-fluid" alt=""></div>
+		  <div class="portfolio-info">
+			<h4>South 3</h4>
+			<p>Temi Tea Garden</p>
+			<a href="/assets/img/stops/temi4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Temi Tea Garden"><i class="bx bx-plus"></i></a>
+			
+		  </div>
+		</div>
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-net">
+			<div class="portfolio-img"><img src="/assets/img/stops/rapdentse1.jpg" class="img-fluid" alt=""></div>
+			<div class="portfolio-info">
+			  <h4>West 1</h4>
+			  <p>Rapdentse Ruins</p>
+			  <a href="/assets/img/stops/rapdentse1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Rapdentse Ruins"><i class="bx bx-plus"></i></a>
+			  
+			</div>
+		  </div>
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+		  <div class="portfolio-img"><img src="/assets/img/stops/zuluk3.jpg" class="img-fluid" alt=""></div>
+		  <div class="portfolio-info">
+			<h4>East 2</h4>
+			<p>Zuluk</p>
+			<a href="/assets/img/stops/zuluk3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Zuluk"><i class="bx bx-plus"></i></a>
+			
+		  </div>
+		</div>
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-card">
+		  <div class="portfolio-img"><img src="/assets/img/stops/gurudongmar4.jpg" class="img-fluid" alt=""></div>
+		  <div class="portfolio-info">
+			<h4>North 2</h4>
+			<p>Gurudongmar Lake</p>
+			<a href="/assets/img/stops/gurudongmar4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Gurudongmar Lake"><i class="bx bx-plus"></i></a>
+			
+		  </div>
+		</div>
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-net">
+			<div class="portfolio-img"><img src="/assets/img/stops/varsey1.jpg" class="img-fluid" alt=""></div>
+			<div class="portfolio-info">
+			  <h4>West 2</h4>
+			  <p>Varsey</p>
+			  <a href="/assets/img/stops/varsey1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Varsey Rhododendron Centuary"><i class="bx bx-plus"></i></a>
+			  
+			</div>
+		  </div>
+
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+		  <div class="portfolio-img"><img src="/assets/img/stops/buddha3.jpg" class="img-fluid" alt=""></div>
+		  <div class="portfolio-info">
+			<h4>South 2</h4>
+			<p>Buddha Prak</p>
+			<a href="/assets/img/stops/buddha3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Buddha Park"><i class="bx bx-plus"></i></a>
+			
+		  </div>
+		</div>
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-app">
+		  <div class="portfolio-img"><img src="/assets/img/stops/tsongmo1.jpg" class="img-fluid" alt=""></div>
+		  <div class="portfolio-info">
+			<h4>East 3</h4>
+			<p>Tsongmo Lake</p>
+			<a href="/assets/img/stops/tsongmo1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Tsongmo Lake"><i class="bx bx-plus"></i></a>
+			
+		  </div>
+		</div>
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-net">
+			<div class="portfolio-img"><img src="/assets/img/stops/khecheopalri1.jpg" class="img-fluid" alt=""></div>
+			<div class="portfolio-info">
+			  <h4>West 3</h4>
+			  <p>Khecheoparli Lake</p>
+			  <a href="/assets/img/stops/khecheopalri1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Khecheoparli Lake"><i class="bx bx-plus"></i></a>
+			</div>
+		  </div>
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-card">
+		  <div class="portfolio-img"><img src="/assets/img/stops/lachen1.jpg" class="img-fluid" alt=""></div>
+		  <div class="portfolio-info">
+			<h4>North 1</h4>
+			<p>Lachen</p>
+			<a href="/assets/img/stops/lachen1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Lachen"><i class="bx bx-plus"></i></a>
+		  </div>
+		</div>
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-card">
+		  <div class="portfolio-img"><img src="/assets/img/stops/yumthang2.jpg" class="img-fluid" alt=""></div>
+		  <div class="portfolio-info">
+			<h4>North 3</h4>
+			<p>Yumthang</p>
+			<a href="/assets/img/stops/yumthang2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Yumthang Valley"><i class="bx bx-plus"></i></a>
+		  </div>
+		</div>
+
+		<div class="col-lg-4 col-md-6 portfolio-item filter-web">
+		  <div class="portfolio-img"><img src="/assets/img/stops/chardham2.jpg" class="img-fluid" alt=""></div>
+		  <div class="portfolio-info">
+			<h4>South 3</h4>
+			<p>Chardham</p>
+			<a href="/assets/img/stops/chardham2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Chardham"><i class="bx bx-plus"></i></a>
+		  </div>
+		</div>
+
+	  </div>
+
+	</div>
+  </section><!-- End Portfolio Section -->
+	</main><!-- End Main Section -->
+  <!-- ======= Footer ======= -->
+  {% include x_footer.html %}
+
+</body>
+
+</html>

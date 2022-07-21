@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    {% include x_head.html %}
+  
+    <link rel="manifest" href="/manifest.json">
+	  <script src="/index.js"></script>
+  
+  </head>
+
+<body>
+
+	<!-- ======= Header ======= -->
+  {% include x_header_others.html %}
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+
+    <!--Inner page section end-->
+    <section class="inner-page">
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="services section-bg">
+        <div class="container" data-aos="fade-up">
+
+          {% for lang in site.languages %}
+              {% assign lang_name = site.data[lang].l10n.lang_name %}
+                 {% if site.active_lang == "en" %}
+                      <div class="section-title">
+                       <h2>Please Select any District of Sikkim.</h2>
+                       <p></p>
+                      </div>       
+                 {% else %}
+                       <div class="section-title">
+                       <h2>कृपया सिक्किम के किसी भी जिले का चयन करें।</h2>
+                       <p></p>
+                       </div>
+                {% endif %}
+              {%break%}
+          {% endfor %}
+
+          <div class="row">
+
+            {% assign pages = site.pages | sort: 'panna_rank' %}
+            {% for my_page in pages %}
+            {% if (my_page.section_title != null) and my_page.type == 'district' %}
+
+            <div class=" card col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <li style="list-style-type:none;">
+                <div class="icon-box">
+
+                  <div class="icon"><i class="bx bx-layer"></i></div>
+                  <h4><a href="{{site.baseurl}}/{{my_page.next_link}}">{{ my_page.section_title }}</a></h4>
+                  <p>{{my_page.brief}}</p>
+                  <a href="{{site.baseurl}}/{{my_page.next_link}}" class="btn btn-primary stretched-link">Learn More</a>
+                </div>
+              </li>
+            </div>
+
+            {% endif %}
+            {% endfor %}
+
+
+          </div>
+
+
+        </div>
+
+      </section><!-- End Services Section -->
+    </section><!-- End Inner Section-->
+
+
+  <!-- ======= Clients Section ======= -->
+        
+    {% include x_client.html %}
+ 
+  <!-- End Cliens Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+    {% include x_footer.html%}
+
+
+</body>
+
+</html>
