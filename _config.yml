@@ -15,7 +15,7 @@ indexpage: "/index.md"
 audio_path: "/audio/"
 episode_hero_path: "/assets/img/stops/"
 episode_welcome_path: "/assets/img/welcome/"
-url: "https://www.tashi2297.github.io/nielit" # the base hostname & protocol for your site
+url: "https://tashi2297.github.io/nielit" # the base hostname & protocol for your site
 logo: "/assets/img/logo/audio-guide.png"
 twitter_username: acmilabs
 github_username:  tashi97
